@@ -2,7 +2,7 @@
 if (isset($_REQUEST['correo']) && isset($_REQUEST['clave'])){
     $correo=$_REQUEST['correo'];
 	$clave=$_REQUEST['clave'];
-	$cnx =  mysqli_connect("localhost","root","","Empresaadministrativa");
+	$cnx =  mysqli_connect("localhost","root","","empresaadministrativa");
     $res=$cnx->query("select * from usuarios where correo = '$correo' and clave = '$clave'");
     $json = array();
 	foreach ($res as $row) 
