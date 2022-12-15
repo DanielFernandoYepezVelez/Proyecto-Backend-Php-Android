@@ -5,7 +5,7 @@ if (isset($_REQUEST['usr']) && isset($_REQUEST['clave']) && isset($_REQUEST['nom
 	$nombre = $_REQUEST['nombre'];
 	$correo = $_REQUEST['correo'];
 	$clave = $_REQUEST['clave'];
-	$cnx =  mysqli_connect("localhost","root","","empresa6am") or die("Ha sucedido un error inexperado en la conexion de la base de datos");
+	$cnx =  mysqli_connect("localhost","root","","empresaadministrativa") or die("Ha sucedido un error inexperado en la conexion de la base de datos");
 	$result = mysqli_query($cnx,"select correo from usuarios where correo = '$correo'");
 	if (mysqli_num_rows($result)==0)
 	{

@@ -9,6 +9,7 @@
 		$cnx =  mysqli_connect("localhost","root","","empresaadministrativa");
 		//Ejecutar una sentencia SELECT y recibir una respuesta
 		$res=$cnx->query("select * from usuarios where usr = '$usr'");
+
 		//si existe el usuario la variable res queda en 1 y sino en 0
 		//En este arreglo se guardará la informacion para pasarla a JSON
 		$json = array();
